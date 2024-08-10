@@ -1,0 +1,131 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Apply a subtle gradient background */
+
+.navbar-nav .nav-link:hover {
+  color: #a8dadc; /* Change text color on hover */
+  text-decoration: none; /* Add underline on hover */
+}
+
+/* Update button styling */
+.btn-primary {
+  background-color: #2f5847;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #3e7665;
+}
+
+.jumbotron {
+  padding-top: 6rem;
+  background-color: #2f5d4bea;
+  color: aliceblue;
+}
+
+#projects {
+  background-color: rgba(47, 93, 75, 0.919);
+  color: aliceblue;
+}
+
+/* General Section Styling */
+section {
+  padding-top: 5rem;
+  opacity: 0;
+  transform: translateY(50px); /* Enhanced slide effect */
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add a cascading effect for content within sections */
+section .content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+section.active .content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Button Hover Effect */
+.btn {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #3e7665; /* Darker shade for hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Card Hover Effect */
+#projects .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#projects .card:hover {
+  transform: scale(1.05); /* Lift up effect */
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  background-color: #2f5847;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+#scrollTopBtn.show {
+  opacity: 1;
+}
+
+#projects .card {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+footer {
+  background-color: #2f5847;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px; /* Adjust the height as needed */
+  margin-top: -5px; /* Reduce margin to bring SVG closer */
+}
+
+.footer-svg {
+  margin-bottom: -5px; /* Reduce this value to bring it closer to the footer */
+  display: block; /* Ensure it's displayed as a block element */
+}
+#projects .card {
+  margin-bottom: 20px; /* Space at the bottom of each card */
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #projects .card {
+    margin-bottom: 20px;
+  }
+}
